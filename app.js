@@ -1361,6 +1361,8 @@ let deferredPrompt = null;
 window.addEventListener("beforeinstallprompt", (e) => {
   e.preventDefault();
   deferredPrompt = e;
+  const fab = $("#btnInstallFab");
+  if (fab) fab.textContent = "✅ 一键安装到桌面";
 });
 
 function installApp() {
@@ -1371,11 +1373,11 @@ function installApp() {
   }
   const ua = navigator.userAgent || "";
   if (/iphone|ipad|ipod/i.test(ua)) {
-    alert("iPhone 添加到主屏幕：\n\n1. 用 Safari 打开本页\n2. 点底部中间的「分享」按钮（方框＋向上箭头）\n3. 下滑选「添加到主屏幕」\n4. 点右上角「添加」");
+    alert("iPhone 添加方法：\n\n苹果系统不允许网页一键安装，请：\n1. 点 Safari 底部「分享」按钮\n2. 选「添加到主屏幕」\n3. 点「添加」");
   } else if (/android/i.test(ua)) {
-    alert("安卓添加到主屏幕：\n\n1. 点浏览器右上角「⋮」菜单\n2. 选「添加到主屏幕」或「安装应用」\n3. 点「添加 / 安装」");
+    alert("请在 Chrome 打开并刷新一次页面，按钮就会变成「一键安装」。");
   } else {
-    alert("电脑添加到桌面：\n\nChrome / Edge 在地址栏右侧会有一个「安装」图标（⊕或电脑图标），点它即可安装。");
+    alert("电脑：Chrome/Edge 地址栏右侧有「安装」图标，点它即可安装到桌面。");
   }
 }
 
