@@ -11,7 +11,7 @@
   <title>背题助手</title>
   <link rel="manifest" href="manifest.json" />
   <link rel="apple-touch-icon" href="icon-192.png" />
-  <link rel="stylesheet" href="styles.css?v=1255" />
+  <link rel="stylesheet" href="styles.css?v=1256" />
 </head>
 <body>
   <header class="app-header">
@@ -150,6 +150,10 @@
         <button class="modal-close" data-close="modal-data">✕</button>
       </div>
       <div class="modal-body">
+        <label>📲 添加到桌面（像 App 一样用）</label>
+        <button class="btn primary" id="btnInstall" style="width:100%">添加到桌面 / 安装</button>
+        <p class="muted">点击后按提示操作，之后桌面会有「背题助手」图标，可离线打开。</p>
+
         <label>🎨 背景颜色</label>
         <div class="theme-swatches" id="themeSwatches"></div>
 
@@ -173,8 +177,8 @@
 
   <div id="toast" class="toast"></div>
 
-  <script src="questions.js?v=1255"></script>
-  <script src="app.js?v=1255"></script>
+  <script src="questions.js?v=1256"></script>
+  <script src="app.js?v=1256"></script>
   <script>
     if ("serviceWorker" in navigator) {
       window.addEventListener("load", function () {
