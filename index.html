@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#4f6ef7" />
+  <meta name="description" content="背题助手 - 刷题与背题网页应用，支持任意设备打开" />
+  <title>背题助手</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand">
+      <span class="logo">📚</span>
+      <div class="brand-text">
+        <h1 id="siteName">背题助手</h1>
+        <p id="siteSubtitle">你的专属背题库</p>
+      </div>
+    </div>
+    <div class="header-actions">
+      <button id="btnSpeak" class="icon-btn" title="语音朗读开关">🔇</button>
+      <button id="btnTheme" class="icon-btn" title="切换夜间模式">🌙</button>
+      <button id="btnData" class="icon-btn" title="导入/导出题库">⚙️</button>
+    </div>
+  </header>
+
+  <nav class="tabbar" id="tabbar">
+    <button class="tab active" data-view="home"><span class="tab-icon">🏠</span><span class="tab-label">首页</span></button>
+    <button class="tab" data-view="flashcard"><span class="tab-icon">🃏</span><span class="tab-label">背题</span></button>
+    <button class="tab" data-view="practice"><span class="tab-icon">✍️</span><span class="tab-label">刷题</span></button>
+    <button class="tab" data-view="review"><span class="tab-icon">🧠</span><span class="tab-label">复习</span></button>
+    <button class="tab" data-view="wrong"><span class="tab-icon">❌</span><span class="tab-label">错题</span></button>
+    <button class="tab" data-view="favorite"><span class="tab-icon">⭐</span><span class="tab-label">收藏</span></button>
+    <button class="tab" data-view="bank"><span class="tab-icon">🗂️</span><span class="tab-label">题库</span></button>
+  </nav>
+
+  <main id="main">
+    <!-- ============ 首页 / 统计 ============ -->
+    <section id="view-home" class="view active">
+      <div id="bankSelector"></div>
+      <div class="stat-grid" id="statGrid"></div>
+
+      <div class="card">
+        <div class="card-title">快速开始</div>
+        <div class="quick-actions">
+          <button class="quick-btn" data-goto="flashcard">🃏 开始背题</button>
+          <button class="quick-btn" data-goto="practice">✍️ 开始刷题</button>
+          <button class="quick-btn" data-goto="review">🧠 今日复习</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">分类进度</div>
+        <div id="categoryProgress"></div>
+      </div>
+    </section>
+
+    <!-- ============ 背题模式 ============ -->
+    <section id="view-flashcard" class="view">
+      <div class="setup-panel" id="flashcardSetup"></div>
+      <div id="flashcardStage" class="hidden"></div>
+    </section>
+
+    <!-- ============ 刷题模式 ============ -->
+    <section id="view-practice" class="view">
+      <div class="setup-panel" id="practiceSetup"></div>
+      <div id="practiceStage" class="hidden"></div>
+    </section>
+
+    <!-- ============ 复习（记忆曲线） ============ -->
+    <section id="view-review" class="view">
+      <div id="reviewStage"></div>
+    </section>
+
+    <!-- ============ 错题本 ============ -->
+    <section id="view-wrong" class="view">
+      <div id="wrongStage"></div>
+    </section>
+
+    <!-- ============ 收藏 ============ -->
+    <section id="view-favorite" class="view">
+      <div id="favoriteStage"></div>
+    </section>
+
+    <!-- ============ 题库管理 ============ -->
+    <section id="view-bank" class="view">
+      <div id="bankStage"></div>
+    </section>
+  </main>
+
+  <!-- ============ 添加/编辑题目 弹窗 ============ -->
+  <div class="modal" id="modal-question">
+    <div class="modal-box modal-wide">
+      <div class="modal-head">
+        <h3 id="qModalTitle">添加题目</h3>
+        <button class="modal-close" data-close="modal-question">✕</button>
+      </div>
+      <div class="modal-body">
+        <label>题型</label>
+        <select id="qType">
+          <option value="single">单选题</option>
+          <option value="multiple">多选题</option>
+          <option value="judge">判断题</option>
+          <option value="fill">填空题</option>
+          <option value="short">简答题</option>
+        </select>
+
+        <label>分类 / 章节（如：马原·第一章）</label>
+        <input id="qCategory" type="text" placeholder="例：计算机基础 / 第一章" />
+
+        <label>标签（用逗号或空格分隔，可选）</label>
+        <input id="qTags" type="text" placeholder="例：重点, 易错" />
+
+        <label>题干</label>
+        <textarea id="qQuestion" rows="3" placeholder="请输入题目内容"></textarea>
+
+        <div id="qOptionsWrap">
+          <label>选项（每行一个，最多 6 个；判断题可留空自动生成 正确/错误）</label>
+          <textarea id="qOptions" rows="4" placeholder="选项A&#10;选项B&#10;选项C&#10;选项D"></textarea>
+        </div>
+
+        <label id="qAnswerLabel">答案（单选填字母如 A；多选填字母如 AC；判断填 正确/错误；填空/简答填文字，多个可接受答案用 | 分隔）</label>
+        <input id="qAnswer" type="text" placeholder="答案" />
+
+        <label>解析（可选）</label>
+        <textarea id="qExplanation" rows="2" placeholder="答案解析"></textarea>
+
+        <label>难度（1 简单 ~ 5 困难）</label>
+        <input id="qDifficulty" type="range" min="1" max="5" value="3" />
+        <div class="diff-label"><span>简单</span><span id="diffVal">3</span><span>困难</span></div>
+      </div>
+      <div class="modal-foot">
+        <button class="btn ghost" data-close="modal-question">取消</button>
+        <button class="btn primary" id="qSave">保存</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ 导入/导出 弹窗 ============ -->
+  <div class="modal" id="modal-data">
+    <div class="modal-box">
+      <div class="modal-head">
+        <h3>题库数据</h3>
+        <button class="modal-close" data-close="modal-data">✕</button>
+      </div>
+      <div class="modal-body">
+        <p class="muted">共 <strong id="dataTotal">0</strong> 道题。数据保存在本浏览器，换设备需导出备份。</p>
+
+        <label>导入题库（JSON 或 CSV）</label>
+        <input id="importFile" type="file" accept=".json,.csv,.txt" />
+        <p class="muted">JSON 格式与 questions.js 相同；CSV 列顺序：题型,分类,题干,选项,答案,解析,标签</p>
+
+        <label>导出题库</label>
+        <div class="row">
+          <button class="btn primary" id="exportJson">导出 JSON 备份</button>
+          <button class="btn" id="exportCsv">导出 CSV</button>
+        </div>
+
+        <label>手动录入</label>
+        <button class="btn" id="btnAddQuestion">＋ 添加一道题目</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="questions.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
