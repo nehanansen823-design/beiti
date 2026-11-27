@@ -66,7 +66,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "01 创新创业课程的目标及核心",
-    "id": "q004"
+    "id": "q004",
+    "explanation": "把学习目标窄化为创业，忽略了思维与能力的培养。"
   },
   {
     "bank": "创新创业基础",
@@ -110,7 +111,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "02 创新创业课——远不止于“创新”与“创业”",
-    "id": "q008"
+    "id": "q008",
+    "explanation": "创业教育是主动选择，并非就业压力的被迫之举。"
   },
   {
     "bank": "创新创业基础",
@@ -216,7 +218,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "05 创新创业，现在是最好还是最坏的时代？",
-    "id": "q017"
+    "id": "q017",
+    "explanation": "大学生恰恰缺乏经验与资源，并非其优势。"
   },
   {
     "bank": "创新创业基础",
@@ -354,7 +357,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "07 创意和创造",
-    "id": "q026"
+    "id": "q026",
+    "explanation": "把创业的定义误当成创新，属于张冠李戴。"
   },
   {
     "bank": "创新创业基础",
@@ -400,7 +404,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "08 创新精神与创新实践",
-    "id": "q030"
+    "id": "q030",
+    "explanation": "熊彼特认为创新主体是企业家，不是创意。"
   },
   {
     "bank": "创新创业基础",
@@ -522,7 +527,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "11 商业计划书",
-    "id": "q038"
+    "id": "q038",
+    "explanation": "商业计划书并无最多25页的硬性限制。"
   },
   {
     "bank": "创新创业基础",
@@ -559,7 +565,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "12 创新方法（一）",
-    "id": "q041"
+    "id": "q041",
+    "explanation": "科学工具并非先决条件，先决条件是科学思想。"
   },
   {
     "bank": "创新创业基础",
@@ -799,7 +806,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "19 商机和市场回应的重要性",
-    "id": "q060"
+    "id": "q060",
+    "explanation": "创业本质是价值创造，并非单纯的创造。"
   },
   {
     "bank": "创新创业基础",
@@ -896,7 +904,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "20 创业机会识别的一般过程",
-    "id": "q068"
+    "id": "q068",
+    "explanation": "特定商机同样具有不确定性，并非确定。"
   },
   {
     "bank": "创新创业基础",
@@ -951,7 +960,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "21 相关因素对于创业机会开发的影响",
-    "id": "q072"
+    "id": "q072",
+    "explanation": "说反了，机会识别明显受社会关系网络影响。"
   },
   {
     "bank": "创新创业基础",
@@ -1023,7 +1033,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "23 机会风险的分类与构成",
-    "id": "q077"
+    "id": "q077",
+    "explanation": "以偏概全，机会风险不只有潜在因素。"
   },
   {
     "bank": "创新创业基础",
@@ -1032,7 +1043,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "23 机会风险的分类与构成",
-    "id": "q078"
+    "id": "q078",
+    "explanation": "说反了，要素匹配关系同样带来风险。"
   },
   {
     "bank": "创新创业基础",
@@ -1088,7 +1100,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "25 防范非系统风险的可能途径",
-    "id": "q082"
+    "id": "q082",
+    "explanation": "技术开发风险属非系统风险，说成系统风险。"
   },
   {
     "bank": "创新创业基础",
@@ -1120,7 +1133,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "26 商业模式的内涵及其本质",
-    "id": "q085"
+    "id": "q085",
+    "explanation": "同一产业内部商业模式也各不相同，并不相同。"
   },
   {
     "bank": "创新创业基础",
@@ -1157,7 +1171,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "27 商业模式设计",
-    "id": "q088"
+    "id": "q088",
+    "explanation": "效率应为相乘而非相加，说成之和错误。"
   },
   {
     "bank": "创新创业基础",
@@ -1234,7 +1249,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "28 创业资源的定义与分类",
-    "id": "q094"
+    "id": "q094",
+    "explanation": "亲友资源属外部资源，说成内部资源。"
   },
   {
     "bank": "创新创业基础",
@@ -1379,7 +1395,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "31 每种创业资源都有最优使用方法",
-    "id": "q105"
+    "id": "q105",
+    "explanation": "说反了，权利和信息也是稀缺资源。"
   },
   {
     "bank": "创新创业基础",
@@ -1481,7 +1498,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "33 创业融资的渠道与选择策略",
-    "id": "q112"
+    "id": "q112",
+    "explanation": "风险投资是股权投资，不是债权投资。"
   },
   {
     "bank": "创新创业基础",
@@ -1530,7 +1548,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "35 不同类型资源的开发（二）",
-    "id": "q116"
+    "id": "q116",
+    "explanation": "技术资源主要源于研发，不是社会资源。"
   },
   {
     "bank": "创新创业基础",
@@ -1764,7 +1783,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "41 创业者素质与能力",
-    "id": "q134"
+    "id": "q134",
+    "explanation": "创业者同时应是创新者，不能只图赚钱。"
   },
   {
     "bank": "创新创业基础",
@@ -1941,7 +1961,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "46 创业团队领导者角色与行为策略",
-    "id": "q148"
+    "id": "q148",
+    "explanation": "说反了，领导者还需组织实施计划。"
   },
   {
     "bank": "创新创业基础",
@@ -2023,7 +2044,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "1.01 何谓民俗文化（物态和非物态）",
-    "id": "q156"
+    "id": "q156",
+    "explanation": "民俗的发展其实会受到传媒影响，题干说反了。"
   },
   {
     "bank": "民俗资源与旅游",
@@ -2069,7 +2091,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "1.02 都市民俗与旅游资源",
-    "id": "q160"
+    "id": "q160",
+    "explanation": "一国的基础文化是民俗文化，并非政治文化。"
   },
   {
     "bank": "民俗资源与旅游",
@@ -2133,7 +2156,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "1.03 乡村民俗与旅游资源",
-    "id": "q165"
+    "id": "q165",
+    "explanation": "并非所有自然人文历史之物都会被传承，过于绝对。"
   },
   {
     "bank": "民俗资源与旅游",
@@ -2184,7 +2208,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "2.01 资源概念的新拓展",
-    "id": "q169"
+    "id": "q169",
+    "explanation": "说法说反了，应是集中化需求被分散化资源满足。"
   },
   {
     "bank": "民俗资源与旅游",
@@ -2253,7 +2278,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "2.02 民俗旅游资源开发",
-    "id": "q175"
+    "id": "q175",
+    "explanation": "资源利用率的贡献会随经济发展变化，并非不变。"
   },
   {
     "bank": "民俗资源与旅游",
@@ -2368,7 +2394,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "3.01 生命精神与稚拙古朴的艺术神韵",
-    "id": "q184"
+    "id": "q184",
+    "explanation": "没有用的东西就不是资源，题干混淆了概念。"
   },
   {
     "bank": "民俗资源与旅游",
@@ -2520,7 +2547,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "3.05 色彩斑斓的民间艺术",
-    "id": "q196"
+    "id": "q196",
+    "explanation": "民俗的文化内涵并不逊色，题干把关系说反了。"
   },
   {
     "bank": "民俗资源与旅游",
@@ -2552,7 +2580,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "4.01 中国旅游资源概述",
-    "id": "q199"
+    "id": "q199",
+    "explanation": "旅游资源与经济效益并非不可分割，说法绝对化。"
   },
   {
     "bank": "民俗资源与旅游",
@@ -2694,7 +2723,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "4.04 中国旅游资源的有效保护",
-    "id": "q210"
+    "id": "q210",
+    "explanation": "有旅游资源仍需论证评估，不能直接开发。"
   },
   {
     "bank": "民俗资源与旅游",
@@ -2717,7 +2747,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "5.01 上海的历史沿革",
-    "id": "q212"
+    "id": "q212",
+    "explanation": "上海地名取自上海浦（河流），并非取自大海。"
   },
   {
     "bank": "民俗资源与旅游",
@@ -2850,7 +2881,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "5.04 风云际会与市民文化",
-    "id": "q223"
+    "id": "q223",
+    "explanation": "上海并非复杂的混合型城市，概念判断有误。"
   },
   {
     "bank": "民俗资源与旅游",
@@ -2901,7 +2933,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "5.05 现代都市与新民俗文化的建构",
-    "id": "q227"
+    "id": "q227",
+    "explanation": "上海最早有轨电车出现于1908年，时间弄错。"
   },
   {
     "bank": "民俗资源与旅游",
@@ -2961,7 +2994,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "6.01 城市化进程中的学科重点转移",
-    "id": "q232"
+    "id": "q232",
+    "explanation": "无人群之处不会产生民俗，民俗源于人群。"
   },
   {
     "bank": "民俗资源与旅游",
@@ -2998,7 +3032,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "6.02 都市民俗学（urban folklore）",
-    "id": "q235"
+    "id": "q235",
+    "explanation": "有市民阶层便会产生相应城市民俗，题干说反了。"
   },
   {
     "bank": "民俗资源与旅游",
@@ -3287,7 +3322,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "7.03 上海古镇——嘉定、松江、南翔、朱家角",
-    "id": "q258"
+    "id": "q258",
+    "explanation": "市镇形象是综合性的，不只是单纯景观。"
   },
   {
     "bank": "民俗资源与旅游",
@@ -3296,7 +3332,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "8.01 江南古镇开发与保护",
-    "id": "q259"
+    "id": "q259",
+    "explanation": "江南城镇特色风景是水乡风貌，非建筑手法。"
   },
   {
     "bank": "民俗资源与旅游",
@@ -3305,7 +3342,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "8.01 江南古镇开发与保护",
-    "id": "q260"
+    "id": "q260",
+    "explanation": "田园风光遭破坏始自改革开放后，并非新中国成立。"
   },
   {
     "bank": "民俗资源与旅游",
@@ -3328,7 +3366,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "8.02 旅游开发与资源保护",
-    "id": "q262"
+    "id": "q262",
+    "explanation": "西塘、乌镇、南浔属浙江，并非江苏。"
   },
   {
     "bank": "民俗资源与旅游",
@@ -3406,7 +3445,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "8.03 民俗的文化附加值",
-    "id": "q269"
+    "id": "q269",
+    "explanation": "旅游开发中起主导的是政府或开发者，非古镇。"
   },
   {
     "bank": "民俗资源与旅游",
@@ -3470,7 +3510,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "9.01 何谓节日资源",
-    "id": "q274"
+    "id": "q274",
+    "explanation": "节庆民俗源于农业文明，而非手工业文明。"
   },
   {
     "bank": "民俗资源与旅游",
@@ -3593,7 +3634,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "9.03 节的文化蕴含——以清明为例",
-    "id": "q284"
+    "id": "q284",
+    "explanation": "豁达生死观多指清明节，题干张冠李戴。"
   },
   {
     "bank": "民俗资源与旅游",
@@ -3676,7 +3718,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "10.02 神话的特点——神圣性和世俗性",
-    "id": "q291"
+    "id": "q291",
+    "explanation": "神话多与礼仪信仰紧密相关，并非独立存在。"
   },
   {
     "bank": "民俗资源与旅游",
@@ -3840,7 +3883,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "11.03 迷信的危害",
-    "id": "q304"
+    "id": "q304",
+    "explanation": "迷信公式表述有误，并非简单的\"如果A就是B\"。"
   },
   {
     "bank": "民俗资源与旅游",
@@ -3964,7 +4008,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "美术作品的展示空间",
-    "id": "q314"
+    "id": "q314",
+    "explanation": "张冠李戴，该书讲中国艺术史而非专论文人画"
   },
   {
     "bank": "美术鉴赏",
@@ -3973,7 +4018,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "美术作品的展示空间",
-    "id": "q315"
+    "id": "q315",
+    "explanation": "说法错误，画价与画家社会地位密切相关"
   },
   {
     "bank": "美术鉴赏",
@@ -4028,7 +4074,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "美术作品的题材与形式",
-    "id": "q319"
+    "id": "q319",
+    "explanation": "创作背景是法国大革命政治事件，与爱情无关"
   },
   {
     "bank": "美术鉴赏",
@@ -4037,7 +4084,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "美术作品的题材与形式",
-    "id": "q320"
+    "id": "q320",
+    "explanation": "说反了，艺术可以与政治紧密相连"
   },
   {
     "bank": "美术鉴赏",
@@ -4088,7 +4136,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "美术鉴赏参考书目",
-    "id": "q324"
+    "id": "q324",
+    "explanation": "“美术”是近代外来译词，并非出自文言文"
   },
   {
     "bank": "美术鉴赏",
@@ -4161,7 +4210,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "艺术学科框架下的美术学",
-    "id": "q330"
+    "id": "q330",
+    "explanation": "释义错误，fine art指纯艺术而非实用艺术"
   },
   {
     "bank": "美术鉴赏",
@@ -4212,7 +4262,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "美术学的历史演进",
-    "id": "q334"
+    "id": "q334",
+    "explanation": "第三类应为人物画，说成“鬼神”张冠李戴"
   },
   {
     "bank": "美术鉴赏",
@@ -4318,7 +4369,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "从古老美术到当代美术",
-    "id": "q343"
+    "id": "q343",
+    "explanation": "说反了，巫术说认为艺术与巫术有关联"
   },
   {
     "bank": "美术鉴赏",
@@ -4447,7 +4499,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "艺术考古与壁画",
-    "id": "q354"
+    "id": "q354",
+    "explanation": "岩石壁画属早期原始阶段，并非成熟期"
   },
   {
     "bank": "美术鉴赏",
@@ -4511,7 +4564,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "壁画的层位——敦煌壁画",
-    "id": "q359"
+    "id": "q359",
+    "explanation": "说法绝对，成立后敦煌壁画仍遭破坏"
   },
   {
     "bank": "美术鉴赏",
@@ -4673,7 +4727,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "文人雅集与集体作画",
-    "id": "q372"
+    "id": "q372",
+    "explanation": "梳单髻是成人标志，未成年人梳双髻"
   },
   {
     "bank": "美术鉴赏",
@@ -4784,7 +4839,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "当代美术的困境——临摹与隐喻",
-    "id": "q381"
+    "id": "q381",
+    "explanation": "说反了，该图题了名却未署名"
   },
   {
     "bank": "美术鉴赏",
@@ -4793,7 +4849,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "当代美术的困境——临摹与隐喻",
-    "id": "q382"
+    "id": "q382",
+    "explanation": "以偏概全，北宋中期并非都用私印署名"
   },
   {
     "bank": "美术鉴赏",
@@ -4857,7 +4914,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "中国古代绘画的题款",
-    "id": "q387"
+    "id": "q387",
+    "explanation": "张冠李戴，《道子墨宝》并非吴道子作品"
   },
   {
     "bank": "美术鉴赏",
@@ -4917,7 +4975,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "中国绘画的笔、墨、纸",
-    "id": "q392"
+    "id": "q392",
+    "explanation": "说反了，熟宣不渗化，生宣才渗透强"
   },
   {
     "bank": "美术鉴赏",
@@ -4977,7 +5036,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "画家的风格形成",
-    "id": "q397"
+    "id": "q397",
+    "explanation": "张冠李戴，拉斐尔以古典和谐著称"
   },
   {
     "bank": "美术鉴赏",
@@ -5014,7 +5074,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "扇面——中国绘画的缩影",
-    "id": "q400"
+    "id": "q400",
+    "explanation": "时代错误，丁观鹏是乾隆朝宫廷画师"
   },
   {
     "bank": "美术鉴赏",
@@ -5065,7 +5126,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "宫廷绘画与人物画",
-    "id": "q404"
+    "id": "q404",
+    "explanation": "以偏概全，宫廷文化并非只有文人趣味"
   },
   {
     "bank": "美术鉴赏",
@@ -5074,7 +5136,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "宫廷绘画与人物画",
-    "id": "q405"
+    "id": "q405",
+    "explanation": "概念错误，白描仅用线条勾勒无明暗"
   },
   {
     "bank": "美术鉴赏",
@@ -5125,7 +5188,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "中国式的训练方式——临摹",
-    "id": "q409"
+    "id": "q409",
+    "explanation": "张冠李戴，题跋出自蔡京而非宋徽宗"
   },
   {
     "bank": "美术鉴赏",
@@ -5185,7 +5249,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "写意山水",
-    "id": "q414"
+    "id": "q414",
+    "explanation": "概念错误，工笔画上色用清水而非淡墨调"
   },
   {
     "bank": "美术鉴赏",
@@ -5245,7 +5310,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "小写意与大写意",
-    "id": "q419"
+    "id": "q419",
+    "explanation": "说反了，此时追求个性自由而非严谨规范"
   },
   {
     "bank": "美术鉴赏",
@@ -5305,7 +5371,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "雕塑——从实用到审美",
-    "id": "q424"
+    "id": "q424",
+    "explanation": "张冠李戴，纪念的是霍去病而非晁错"
   },
   {
     "bank": "美术鉴赏",
@@ -5365,7 +5432,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "古文明与雕塑",
-    "id": "q429"
+    "id": "q429",
+    "explanation": "概念错误，雕塑多具雄浑气势而非贵族气质"
   },
   {
     "bank": "美术鉴赏",
@@ -5374,7 +5442,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "古文明与雕塑",
-    "id": "q430"
+    "id": "q430",
+    "explanation": "以偏概全，其圣母像并非同一模特"
   },
   {
     "bank": "美术鉴赏",
@@ -5425,7 +5494,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "浮雕——从砖雕到革命浮雕",
-    "id": "q434"
+    "id": "q434",
+    "explanation": "说反了，圆雕可多角度观赏，浮雕单一"
   },
   {
     "bank": "美术鉴赏",
@@ -5545,7 +5615,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "绢画——唐代美术的宝贵遗存",
-    "id": "q444"
+    "id": "q444",
+    "explanation": "说法错误，释迦牟尼实行火葬而非土葬"
   },
   {
     "bank": "美术鉴赏",
@@ -5605,7 +5676,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "泥塑与彩塑",
-    "id": "q449"
+    "id": "q449",
+    "explanation": "韦驮与弥勒背靠背供奉，并非单独"
   },
   {
     "bank": "美术鉴赏",
@@ -5711,7 +5783,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "中国当代大像——艺术的怪胎",
-    "id": "q458"
+    "id": "q458",
+    "explanation": "古典陶瓶以黑绘红绘为主，非白底彩绘"
   },
   {
     "bank": "美术鉴赏",
@@ -5720,7 +5793,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "中国当代大像——艺术的怪胎",
-    "id": "q459"
+    "id": "q459",
+    "explanation": "说反了，瓷器烧成温度高于陶器"
   },
   {
     "bank": "美术鉴赏",
@@ -5771,7 +5845,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "民间美术——瓷器与剪纸",
-    "id": "q463"
+    "id": "q463",
+    "explanation": "官窑专供皇家，不进入市场交易"
   },
   {
     "bank": "美术鉴赏",
@@ -5789,7 +5864,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "中西文化交流与东西方女神",
-    "id": "q465"
+    "id": "q465",
+    "explanation": "张冠李戴，见西王母是周穆王传说非张骞"
   },
   {
     "bank": "美术鉴赏",
@@ -5877,7 +5953,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "石棺上的人类起源",
-    "id": "q472"
+    "id": "q472",
+    "explanation": "张冠李戴，鹿谐音“禄”而非“路”"
   },
   {
     "bank": "美术鉴赏",
@@ -5937,7 +6014,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "美术的功能与目的",
-    "id": "q477"
+    "id": "q477",
+    "explanation": "该画是革命政治宣传，与宗教无关"
   },
   {
     "bank": "美术鉴赏",
@@ -6008,7 +6086,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "中国味与中国气派",
-    "id": "q482"
+    "id": "q482",
+    "explanation": "该画是艺术再创作，并非按照片描摹"
   },
   {
     "bank": "美术鉴赏",
@@ -6181,7 +6260,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "美术与宗教",
-    "id": "q495"
+    "id": "q495",
+    "explanation": "核心主尊依本尊而异，并非都是释迦牟尼"
   },
   {
     "bank": "美术鉴赏",
@@ -6236,7 +6316,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "美术的意蕴与倾向",
-    "id": "q499"
+    "id": "q499",
+    "explanation": "主因是政治独立与民族自尊，非仅记录史事"
   },
   {
     "bank": "美术鉴赏",
@@ -6296,7 +6377,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "美——有意味的形式",
-    "id": "q504"
+    "id": "q504",
+    "explanation": "解释不同因时代观念演变，非纠正错误"
   },
   {
     "bank": "美术鉴赏",
@@ -6305,7 +6387,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "美——有意味的形式",
-    "id": "q505"
+    "id": "q505",
+    "explanation": "概念错误，美术指造型艺术而非泛美感"
   },
   {
     "bank": "美术鉴赏",
@@ -6385,7 +6468,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "二十世纪中国美术传统",
-    "id": "q511"
+    "id": "q511",
+    "explanation": "说反了，艺术并无统一评判标准"
   },
   {
     "bank": "美术鉴赏",
@@ -6440,7 +6524,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "二十世纪中国美术变革",
-    "id": "q515"
+    "id": "q515",
+    "explanation": "说反了，拉斐尔表现普遍美而非个人情绪"
   },
   {
     "bank": "美术鉴赏",
@@ -6587,7 +6672,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "美术与精神活动",
-    "id": "q526"
+    "id": "q526",
+    "explanation": "说法错误，艺术品常被用作行贿媒介"
   },
   {
     "bank": "美术鉴赏",
@@ -6596,7 +6682,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "美术与精神活动",
-    "id": "q527"
+    "id": "q527",
+    "explanation": "以偏概全，梅兰竹菊寄托文人意趣非所有"
   },
   {
     "bank": "美术鉴赏",
@@ -6605,7 +6692,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "美术与精神活动",
-    "id": "q528"
+    "id": "q528",
+    "explanation": "概念错误，艺术目的多元而非单一"
   },
   {
     "bank": "美术鉴赏",
@@ -6655,7 +6743,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "美术欣赏的内容和形式总论",
-    "id": "q532"
+    "id": "q532",
+    "explanation": "说法偏颇，艺术不能只有形式而无内容"
   },
   {
     "bank": "美术鉴赏",
@@ -6782,7 +6871,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "美术的趣味和意味",
-    "id": "q542"
+    "id": "q542",
+    "explanation": "张冠李戴，“悲鸿生命”指八十七神仙卷"
   },
   {
     "bank": "美术鉴赏",
@@ -7079,7 +7169,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "线条的力度和力量",
-    "id": "q565"
+    "id": "q565",
+    "explanation": "时代错误，赵孟頫是元代书画家非宋代"
   },
   {
     "bank": "美术鉴赏",
@@ -7287,7 +7378,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "绘画欣赏与光感",
-    "id": "q581"
+    "id": "q581",
+    "explanation": "说反了，色彩可分析可计量"
   },
   {
     "bank": "美术鉴赏",
@@ -7296,7 +7388,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "绘画欣赏与光感",
-    "id": "q582"
+    "id": "q582",
+    "explanation": "唐代婚礼男红女绿，并非都穿红"
   },
   {
     "bank": "美术鉴赏",
@@ -7443,7 +7536,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "传统绘画与现代绘画",
-    "id": "q593"
+    "id": "q593",
+    "explanation": "光的三原色是红绿蓝，与颜料不同"
   },
   {
     "bank": "美术鉴赏",
@@ -7529,7 +7623,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "色彩的对比与色块",
-    "id": "q599"
+    "id": "q599",
+    "explanation": "说反了，该画色调柔和而非明亮对比"
   },
   {
     "bank": "美术鉴赏",
@@ -7688,7 +7783,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "艺术的创新",
-    "id": "q612"
+    "id": "q612",
+    "explanation": "说反了，时间会使油画变色褪色"
   },
   {
     "bank": "美术鉴赏",
@@ -7752,7 +7848,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "学习传统",
-    "id": "q617"
+    "id": "q617",
+    "explanation": "南北岳颠倒，北岳恒山南岳衡山"
   },
   {
     "bank": "美术鉴赏",
@@ -7830,7 +7927,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "艺术的真实性",
-    "id": "q623"
+    "id": "q623",
+    "explanation": "张冠李戴，该图藏于波士顿美术馆"
   },
   {
     "bank": "创业法学",
@@ -7839,7 +7937,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "1.01 引言",
-    "id": "q624"
+    "id": "q624",
+    "explanation": "误称其为方法之学，实为法学学科。"
   },
   {
     "bank": "创业法学",
@@ -8008,7 +8107,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "1.03 创业项目的法律识别：风险与机会并存",
-    "id": "q637"
+    "id": "q637",
+    "explanation": "管理性规定违反一般不导致合同无效。"
   },
   {
     "bank": "创业法学",
@@ -8026,7 +8126,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "1.03 创业项目的法律识别：风险与机会并存",
-    "id": "q639"
+    "id": "q639",
+    "explanation": "初创企业同样需规范劳资管理。"
   },
   {
     "bank": "创业法学",
@@ -8313,7 +8414,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "1.07 创业资源的整合：兵马未动粮草先行（二）",
-    "id": "q659"
+    "id": "q659",
+    "explanation": "混淆合同生效与抵押权登记设立。"
   },
   {
     "bank": "创业法学",
@@ -8331,7 +8433,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "1.08 创业资源的整合：兵马未动粮草先行（三）",
-    "id": "q661"
+    "id": "q661",
+    "explanation": "父债子还并非法律强制，仅在继承遗产范围内清偿。"
   },
   {
     "bank": "创业法学",
@@ -8437,7 +8540,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "1.10 专题讨论：互联网时代下企业声誉资本的法律保护",
-    "id": "q668"
+    "id": "q668",
+    "explanation": "两者构成要件不同，不能混同。"
   },
   {
     "bank": "创业法学",
@@ -8446,7 +8550,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "1.10 专题讨论：互联网时代下企业声誉资本的法律保护",
-    "id": "q669"
+    "id": "q669",
+    "explanation": "两诉竞合只能择一，不能同时提起。"
   },
   {
     "bank": "创业法学",
@@ -8455,7 +8560,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "1.11 创业实训：拟定加盟创业团队成员之间合作的框架协议",
-    "id": "q670"
+    "id": "q670",
+    "explanation": "两者性质与内容不同，不可混同。"
   },
   {
     "bank": "创业法学",
@@ -8464,7 +8570,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "1.11 创业实训：拟定加盟创业团队成员之间合作的框架协议",
-    "id": "q671"
+    "id": "q671",
+    "explanation": "合伙协议与加盟协议性质不同。"
   },
   {
     "bank": "创业法学",
@@ -8616,7 +8723,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "2.02 市场自由：海阔天空任我行（一）",
-    "id": "q683"
+    "id": "q683",
+    "explanation": "还有仲裁、调解等途径，诉讼非唯一。"
   },
   {
     "bank": "创业法学",
@@ -8666,7 +8774,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "2.03 市场自由：海阔天空任我行（二）",
-    "id": "q687"
+    "id": "q687",
+    "explanation": "要约邀请无法律约束力。"
   },
   {
     "bank": "创业法学",
@@ -8716,7 +8825,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "2.04 市场自由：海阔天空任我行（三）",
-    "id": "q691"
+    "id": "q691",
+    "explanation": "三者性质不同，仅定金有双倍罚则。"
   },
   {
     "bank": "创业法学",
@@ -8725,7 +8835,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "2.04 市场自由：海阔天空任我行（三）",
-    "id": "q692"
+    "id": "q692",
+    "explanation": "'负责解决'无保证意思，不构成保证。"
   },
   {
     "bank": "创业法学",
@@ -8828,7 +8939,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "2.05 市场自由：海阔天空任我行（四）",
-    "id": "q700"
+    "id": "q700",
+    "explanation": "解除需行使权利，合同不会自动解除。"
   },
   {
     "bank": "创业法学",
@@ -8873,7 +8985,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "2.06 市场自由：海阔天空任我行（五）",
-    "id": "q704"
+    "id": "q704",
+    "explanation": "定金不得超过主合同标的额20%。"
   },
   {
     "bank": "创业法学",
@@ -8930,7 +9043,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "2.07 市场准入：负面清单看清楚",
-    "id": "q708"
+    "id": "q708",
+    "explanation": "决定性作用的是市场，而非政府。"
   },
   {
     "bank": "创业法学",
@@ -9062,7 +9176,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "2.10 创业实训：从滴滴看法律政策风险",
-    "id": "q718"
+    "id": "q718",
+    "explanation": "应为毕业2年内、注册后1年内免收。"
   },
   {
     "bank": "创业法学",
@@ -9370,7 +9485,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "3.03 你我的约定：创业组织发起协议的制定与签署",
-    "id": "q738"
+    "id": "q738",
+    "explanation": "商业模式可受商业秘密等保护，约定有效。"
   },
   {
     "bank": "创业法学",
@@ -9470,7 +9586,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "3.04 流程与程序：创业组织的注册登记",
-    "id": "q744"
+    "id": "q744",
+    "explanation": "可以自行办理，并非必须委托律师。"
   },
   {
     "bank": "创业法学",
@@ -9488,7 +9605,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "3.04 流程与程序：创业组织的注册登记",
-    "id": "q746"
+    "id": "q746",
+    "explanation": "后置审批应在登记之后办理。"
   },
   {
     "bank": "创业法学",
@@ -9656,7 +9774,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "3.06 好聚也要好散：创业组织的解散与清算",
-    "id": "q760"
+    "id": "q760",
+    "explanation": "清算后还需办理注销登记。"
   },
   {
     "bank": "创业法学",
@@ -9665,7 +9784,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "3.06 好聚也要好散：创业组织的解散与清算",
-    "id": "q761"
+    "id": "q761",
+    "explanation": "创业者可自行清算，无须特定机构。"
   },
   {
     "bank": "创业法学",
@@ -9765,7 +9885,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "3.07 涅槃与重生：创业组织如何获得破产保护",
-    "id": "q770"
+    "id": "q770",
+    "explanation": "破产应向法院申请且须符合法定条件。"
   },
   {
     "bank": "创业法学",
@@ -9812,7 +9933,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "3.08 胡萝卜与大棒：创业组织高层管理团队的激励与约束",
-    "id": "q773"
+    "id": "q773",
+    "explanation": "高管既需激励也需约束。"
   },
   {
     "bank": "创业法学",
@@ -10790,7 +10912,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "5.02 商业秘密：记忆名单属于谁？",
-    "id": "q835"
+    "id": "q835",
+    "explanation": "指不为所属领域相关人员普遍知悉。"
   },
   {
     "bank": "创业法学",
@@ -10931,7 +11054,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "5.06 自主定价：我的地盘我做主？（二）",
-    "id": "q845"
+    "id": "q845",
+    "explanation": "自主定价权受法律限制，并非绝对。"
   },
   {
     "bank": "创业法学",
@@ -10940,7 +11064,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "5.06 自主定价：我的地盘我做主？（二）",
-    "id": "q846"
+    "id": "q846",
+    "explanation": "属正常差异定价，不构成违法价格歧视。"
   },
   {
     "bank": "创业法学",
@@ -10949,7 +11074,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "5.07 行业协会：做个吃瓜群众也不行吗？",
-    "id": "q847"
+    "id": "q847",
+    "explanation": "纵向价格垄断协议同样可追责。"
   },
   {
     "bank": "创业法学",
@@ -10958,7 +11084,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "5.07 行业协会：做个吃瓜群众也不行吗？",
-    "id": "q848"
+    "id": "q848",
+    "explanation": "企业应参与表达诉求，不应消极旁观。"
   },
   {
     "bank": "创业法学",
@@ -10976,7 +11103,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "5.07 行业协会：做个吃瓜群众也不行吗？",
-    "id": "q850"
+    "id": "q850",
+    "explanation": "是'可以'酌情，而非'必须'减免。"
   },
   {
     "bank": "创业法学",
@@ -11040,7 +11168,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "5.08 广告法律风险：把衣服给那姑娘披上！",
-    "id": "q854"
+    "id": "q854",
+    "explanation": "广告受广告法及公序良俗约束。"
   },
   {
     "bank": "创业法学",
@@ -11049,7 +11178,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "5.08 广告法律风险：把衣服给那姑娘披上！",
-    "id": "q855"
+    "id": "q855",
+    "explanation": "我国明令禁止发布烟草广告。"
   },
   {
     "bank": "创业法学",
@@ -11058,7 +11188,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "5.08 广告法律风险：把衣服给那姑娘披上！",
-    "id": "q856"
+    "id": "q856",
+    "explanation": "并非一律禁止，仅限制特定情形。"
   },
   {
     "bank": "创业法学",
@@ -11138,7 +11269,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "5.10 质量法律风险：永不消逝的恋人（二）",
-    "id": "q861"
+    "id": "q861",
+    "explanation": "产品存在缺陷时仍可能担责。"
   },
   {
     "bank": "创业法学",
@@ -11147,7 +11279,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "5.10 质量法律风险：永不消逝的恋人（二）",
-    "id": "q862"
+    "id": "q862",
+    "explanation": "认证并非越多越好，需合理选择。"
   },
   {
     "bank": "创业法学",
@@ -11210,7 +11343,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "5.11 员工福利：让你看重的人看到未来",
-    "id": "q866"
+    "id": "q866",
+    "explanation": "征收机构责令补缴，而非代其缴纳。"
   },
   {
     "bank": "创业法学",
@@ -11228,7 +11362,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "5.11 员工福利：让你看重的人看到未来",
-    "id": "q868"
+    "id": "q868",
+    "explanation": "应按时按月缴纳，非3个月内。"
   },
   {
     "bank": "创业法学",
@@ -11603,7 +11738,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "6.02 互联网创业盈利模式：免费是最好的盈利模式？",
-    "id": "q891"
+    "id": "q891",
+    "explanation": "免费并非唯一出路，还有增值等模式。"
   },
   {
     "bank": "创业法学",
@@ -11621,7 +11757,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "6.02 互联网创业盈利模式：免费是最好的盈利模式？",
-    "id": "q893"
+    "id": "q893",
+    "explanation": "并非一律构成，须符合法定要件。"
   },
   {
     "bank": "创业法学",
@@ -11653,7 +11790,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "6.03 互联网创业商业模式：买张船票出海，真的那么美？",
-    "id": "q896"
+    "id": "q896",
+    "explanation": "两种策略各有适用，不可绝对化。"
   },
   {
     "bank": "创业法学",
@@ -11662,7 +11800,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "6.03 互联网创业商业模式：买张船票出海，真的那么美？",
-    "id": "q897"
+    "id": "q897",
+    "explanation": "平台创业门槛高风险大，优点不必然。"
   },
   {
     "bank": "创业法学",
@@ -11726,7 +11865,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "6.05 法律服务 O2O：只是看上去很美？（二）",
-    "id": "q902"
+    "id": "q902",
+    "explanation": "O2O指线上到线下（Online To Offline）。"
   },
   {
     "bank": "创业法学",
@@ -11735,7 +11875,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "6.06 专题讨论：如果腾讯复制了你的创业项目，你会怎么办？",
-    "id": "q903"
+    "id": "q903",
+    "explanation": "实质是深度融合创新，非仅跨界。"
   },
   {
     "bank": "创业法学",
@@ -11780,7 +11921,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "6.07 创业实训：拟定微信赛事项目书",
-    "id": "q906"
+    "id": "q906",
+    "explanation": "已有收费成功的O2O案例。"
   },
   {
     "bank": "创业法学",
@@ -12111,7 +12253,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "7.05 名正“商”顺：通过商标注册承载商誉",
-    "id": "q932"
+    "id": "q932",
+    "explanation": "经使用获得显著性的仍可注册。"
   },
   {
     "bank": "创业法学",
@@ -12120,7 +12263,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "7.05 名正“商”顺：通过商标注册承载商誉",
-    "id": "q933"
+    "id": "q933",
+    "explanation": "禁止用国家机关、国际组织标志作商标。"
   },
   {
     "bank": "创业法学",
@@ -12147,7 +12291,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "7.05 名正“商”顺：通过商标注册承载商誉",
-    "id": "q936"
+    "id": "q936",
+    "explanation": "企业名称与商标可并存，不违法。"
   },
   {
     "bank": "创业法学",
@@ -12465,7 +12610,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "7.08 名至“利”归：商标运营的策略",
-    "id": "q958"
+    "id": "q958",
+    "explanation": "变更商标或名义地址须办理法定手续。"
   },
   {
     "bank": "创业法学",
@@ -12483,7 +12629,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "7.08 名至“利”归：商标运营的策略",
-    "id": "q960"
+    "id": "q960",
+    "explanation": "商标可许可他人使用并收费。"
   },
   {
     "bank": "创业法学",
@@ -12577,7 +12724,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "7.10 创业实训：如何保护好自己的创意（一）",
-    "id": "q966"
+    "id": "q966",
+    "explanation": "创意价值在内容本身，非表达方式。"
   },
   {
     "bank": "创业法学",
@@ -12586,7 +12734,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "7.10 创业实训：如何保护好自己的创意（一）",
-    "id": "q967"
+    "id": "q967",
+    "explanation": "仅著作权不够，还须商业秘密等保护。"
   },
   {
     "bank": "创业法学",
@@ -12676,7 +12825,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "8.01 本章导入：雷士照明创始人吴长江的商海沉浮",
-    "id": "q976"
+    "id": "q976",
+    "explanation": "法律风险必须充分评估防范。"
   },
   {
     "bank": "创业法学",
@@ -12819,7 +12969,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "8.04 风险预防：从亲友信任到制度约束",
-    "id": "q986"
+    "id": "q986",
+    "explanation": "还包括违约、合规、侵权等风险。"
   },
   {
     "bank": "创业法学",
@@ -12859,7 +13010,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "8.05 纠纷解决：庭外言和",
-    "id": "q989"
+    "id": "q989",
+    "explanation": "法律纠纷本质即权利义务争议。"
   },
   {
     "bank": "创业法学",
@@ -12906,7 +13058,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "8.06 纠纷解决：法庭亮剑",
-    "id": "q992"
+    "id": "q992",
+    "explanation": "还可向合同履行地等法院起诉。"
   },
   {
     "bank": "创业法学",
@@ -12991,7 +13144,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "8.08 罪与罚：创业勿踏刑法雷区（二）",
-    "id": "q997"
+    "id": "q997",
+    "explanation": "仅组织、领导者才构成本罪。"
   },
   {
     "bank": "创业法学",
@@ -13000,7 +13154,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "8.08 罪与罚：创业勿踏刑法雷区（二）",
-    "id": "q998"
+    "id": "q998",
+    "explanation": "非法占有目的是集资诈骗罪的构成要件。"
   },
   {
     "bank": "创业法学",
@@ -13188,7 +13343,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "1.01 舞蹈欣赏——范畴与路径",
-    "id": "q1012"
+    "id": "q1012",
+    "explanation": "卓舞是山南地区的特色舞，并非日喀则。"
   },
   {
     "bank": "舞蹈鉴赏",
@@ -13289,7 +13445,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "1.02 舞蹈形态——生活、规训、作品",
-    "id": "q1020"
+    "id": "q1020",
+    "explanation": "安多被称为马区，法区指的是卫藏。"
   },
   {
     "bank": "舞蹈鉴赏",
@@ -13329,7 +13486,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "1.03 舞蹈层次——原生、次生、再生",
-    "id": "q1023"
+    "id": "q1023",
+    "explanation": "同甲是宗教祭祀舞蹈，并非世俗生活舞蹈。"
   },
   {
     "bank": "舞蹈鉴赏",
@@ -13398,7 +13556,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "1.04 舞蹈的历史",
-    "id": "q1029"
+    "id": "q1029",
+    "explanation": "作品形态与剧场形态是两种不同形态，不能等同。"
   },
   {
     "bank": "舞蹈鉴赏",
@@ -13480,7 +13639,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "1.05 舞蹈蕴含——粗身、细身、业身",
-    "id": "q1035"
+    "id": "q1035",
+    "explanation": "灵藏指精神灵性层面，并非粗身的肉体。"
   },
   {
     "bank": "舞蹈鉴赏",
@@ -13549,7 +13709,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "1.06 舞蹈世界——有器、有情、有话",
-    "id": "q1041"
+    "id": "q1041",
+    "explanation": "闻法飞天表现听法情景，并非对死亡的态度。"
   },
   {
     "bank": "舞蹈鉴赏",
@@ -13599,7 +13760,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "1.07 舞蹈的至高境界——《飞天》",
-    "id": "q1045"
+    "id": "q1045",
+    "explanation": "粗身只是欣赏的起点，并非终点。"
   },
   {
     "bank": "舞蹈鉴赏",
@@ -13617,7 +13779,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "1.07 舞蹈的至高境界——《飞天》",
-    "id": "q1047"
+    "id": "q1047",
+    "explanation": "泰国舞蹈属东南亚湄公河文明，并非黄河文明。"
   },
   {
     "bank": "舞蹈鉴赏",
@@ -13696,7 +13859,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "1.08 舞种形式与表演形式",
-    "id": "q1052"
+    "id": "q1052",
+    "explanation": "作品形态舞蹈不等于剧场舞蹈，二者有别。"
   },
   {
     "bank": "舞蹈鉴赏",
@@ -13770,7 +13934,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "1.09 舞蹈结构与语篇幅",
-    "id": "q1058"
+    "id": "q1058",
+    "explanation": "构成整体结构的是舞蹈形式，并非内容。"
   },
   {
     "bank": "舞蹈鉴赏",
@@ -13885,7 +14050,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "1.10 舞蹈主题的N级提示",
-    "id": "q1066"
+    "id": "q1066",
+    "explanation": "肢体语言是外在的身体语言，并非内在语言。"
   },
   {
     "bank": "舞蹈鉴赏",
@@ -14128,7 +14294,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "1.14 古典审美——时间及延伸原则",
-    "id": "q1084"
+    "id": "q1084",
+    "explanation": "《睡美人·洗礼》是芭蕾舞，并非现代舞。"
   },
   {
     "bank": "舞蹈鉴赏",
@@ -14137,7 +14304,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "1.14 古典审美——时间及延伸原则",
-    "id": "q1085"
+    "id": "q1085",
+    "explanation": "金手指变奏并非慷慨仙女的舞段，张冠李戴。"
   },
   {
     "bank": "舞蹈鉴赏",
@@ -14165,7 +14333,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "1.14 古典审美——时间及延伸原则",
-    "id": "q1087"
+    "id": "q1087",
+    "explanation": "原文是同传统观念决裂，并非与传统艺术决裂。"
   },
   {
     "bank": "舞蹈鉴赏",
@@ -14291,7 +14460,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "1.16 古典美及价值判断原则",
-    "id": "q1096"
+    "id": "q1096",
+    "explanation": "古典生命力并非恒久，历史上也曾中断衰落。"
   },
   {
     "bank": "舞蹈鉴赏",
@@ -14360,7 +14530,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "1.17 古典舞范本——印度史诗与古典舞",
-    "id": "q1102"
+    "id": "q1102",
+    "explanation": "各流派共享共同语汇原则，并非都各不相同。"
   },
   {
     "bank": "舞蹈鉴赏",
@@ -14418,7 +14589,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "1.18 古典舞的艺术场域",
-    "id": "q1106"
+    "id": "q1106",
+    "explanation": "印度古典舞有独特的语汇原则，与他国不同。"
   },
   {
     "bank": "舞蹈鉴赏",
@@ -14446,7 +14618,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "1.18 古典舞的艺术场域",
-    "id": "q1108"
+    "id": "q1108",
+    "explanation": "剧场并非古典舞特有的舞蹈场。"
   },
   {
     "bank": "舞蹈鉴赏",
@@ -14506,7 +14679,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "1.19 古典舞的程式",
-    "id": "q1113"
+    "id": "q1113",
+    "explanation": "它正用以歌颂国家昌盛，说法颠倒。"
   },
   {
     "bank": "舞蹈鉴赏",
@@ -14543,7 +14717,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "1.20 中国古典舞的时空",
-    "id": "q1116"
+    "id": "q1116",
+    "explanation": "空间与时间的说法正好说反了。"
   },
   {
     "bank": "舞蹈鉴赏",
@@ -14617,7 +14792,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "1.21 中国古典舞的文化",
-    "id": "q1122"
+    "id": "q1122",
+    "explanation": "《秦王点兵》是现代编创作品，并非先秦舞蹈。"
   },
   {
     "bank": "舞蹈鉴赏",
@@ -14677,7 +14853,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "1.22 中国古典舞的遗存",
-    "id": "q1127"
+    "id": "q1127",
+    "explanation": "信仰对舞蹈家作品影响重大，并非不大。"
   },
   {
     "bank": "舞蹈鉴赏",
@@ -14746,7 +14923,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "1.23 从《飞天》到裂面舞",
-    "id": "q1133"
+    "id": "q1133",
+    "explanation": "敦煌舞融合多民族多文化，并非全属汉族舞。"
   },
   {
     "bank": "舞蹈鉴赏",
@@ -14843,7 +15021,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "1.25 《挽扇士女》赏析",
-    "id": "q1141"
+    "id": "q1141",
+    "explanation": "其创作基础并非满族宫廷舞旋转，属张冠李戴。"
   },
   {
     "bank": "舞蹈鉴赏",
@@ -14916,7 +15095,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "1.26 中国古典舞的困境",
-    "id": "q1147"
+    "id": "q1147",
+    "explanation": "身韵来源还包括武术，且非仅南昆，说法不全。"
   },
   {
     "bank": "舞蹈鉴赏",
@@ -14985,7 +15165,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "1.28 舞台民间舞的向度——民间本元",
-    "id": "q1152"
+    "id": "q1152",
+    "explanation": "还有新创编的再生民间舞，并非都改编自传统。"
   },
   {
     "bank": "舞蹈鉴赏",
@@ -15008,7 +15189,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "1.28 舞台民间舞的向度——民间本元",
-    "id": "q1154"
+    "id": "q1154",
+    "explanation": "民间舞蹈有自主能力，并非缺乏抗干扰能力。"
   },
   {
     "bank": "舞蹈鉴赏",
@@ -15031,7 +15213,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "1.29 舞台民间舞的向度——创作多元",
-    "id": "q1156"
+    "id": "q1156",
+    "explanation": "也有间接隐喻方式，并非都直接阐述。"
   },
   {
     "bank": "舞蹈鉴赏",
@@ -15137,7 +15320,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "1.31 民间舞的实践语境与技术形式",
-    "id": "q1164"
+    "id": "q1164",
+    "explanation": "发展方向还有原生态等其他方向，非仅典雅。"
   },
   {
     "bank": "舞蹈鉴赏",
@@ -15201,7 +15385,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "1.32 中国民族民间舞",
-    "id": "q1169"
+    "id": "q1169",
+    "explanation": "少数民族古典舞不属于民族民间舞范围。"
   },
   {
     "bank": "舞蹈鉴赏",
@@ -15261,7 +15446,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "1.33 《孔雀舞》与《雀之灵》赏析",
-    "id": "q1174"
+    "id": "q1174",
+    "explanation": "不同舞蹈场给观众的感受与思想并不相同。"
   },
   {
     "bank": "舞蹈鉴赏",
@@ -15270,7 +15456,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "1.33 《孔雀舞》与《雀之灵》赏析",
-    "id": "q1175"
+    "id": "q1175",
+    "explanation": "说反了，欣赏时其实能感受到民间乐趣。"
   },
   {
     "bank": "舞蹈鉴赏",
@@ -15316,7 +15503,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "1.34 中国民间舞舞者",
-    "id": "q1179"
+    "id": "q1179",
+    "explanation": "二老艺人指传承的老艺人，并非重构者。"
   },
   {
     "bank": "舞蹈鉴赏",
@@ -15367,7 +15555,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "1.35 《孔雀飞天》与《孔雀舞者》赏析",
-    "id": "q1183"
+    "id": "q1183",
+    "explanation": "它展现孔雀的灵动风姿，并非信仰生活。"
   },
   {
     "bank": "舞蹈鉴赏",
@@ -15441,7 +15630,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "1.36 民间舞《济公》赏析",
-    "id": "q1189"
+    "id": "q1189",
+    "explanation": "首要应了解民间文化内容，而非舞蹈形式。"
   },
   {
     "bank": "舞蹈鉴赏",
@@ -15501,7 +15691,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "1.37 以舞为本的绝症",
-    "id": "q1194"
+    "id": "q1194",
+    "explanation": "民间舞创作应尊重传统，并非自由开放。"
   },
   {
     "bank": "舞蹈鉴赏",
@@ -15510,7 +15701,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "1.37 以舞为本的绝症",
-    "id": "q1195"
+    "id": "q1195",
+    "explanation": "中国古典舞并未完全消失在民间。"
   },
   {
     "bank": "舞蹈鉴赏",
@@ -15570,7 +15762,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "1.38 《云南映像》的赏析和评价",
-    "id": "q1200"
+    "id": "q1200",
+    "explanation": "民间舞代表应是民间艺人，并非职业舞者。"
   },
   {
     "bank": "舞蹈鉴赏",
@@ -15607,7 +15800,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "1.39 何谓时代性——古典与民间的时代反哺",
-    "id": "q1203"
+    "id": "q1203",
+    "explanation": "进入主流不代表内容必须主流化。"
   },
   {
     "bank": "舞蹈鉴赏",
@@ -15685,7 +15879,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "1.40 现代舞——从《睡美人》到《海棠依旧》",
-    "id": "q1209"
+    "id": "q1209",
+    "explanation": "徐志摩是现代诗人，并非古典人物。"
   },
   {
     "bank": "舞蹈鉴赏",
@@ -15703,7 +15898,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "1.40 现代舞——从《睡美人》到《海棠依旧》",
-    "id": "q1211"
+    "id": "q1211",
+    "explanation": "两者发展相距仅几十年，并非一千年。"
   },
   {
     "bank": "舞蹈鉴赏",
@@ -15740,7 +15936,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "1.41 审美与审丑之间",
-    "id": "q1214"
+    "id": "q1214",
+    "explanation": "空间与时间变化的依赖关系说反了。"
   },
   {
     "bank": "舞蹈鉴赏",
@@ -15804,7 +16001,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "1.42 舞蹈身体语料的扩大",
-    "id": "q1219"
+    "id": "q1219",
+    "explanation": "现代舞的身体语源应是本土，并非异域。"
   },
   {
     "bank": "舞蹈鉴赏",
@@ -15873,7 +16071,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "1.43 外国现代舞——从审美到审丑",
-    "id": "q1225"
+    "id": "q1225",
+    "explanation": "现代舞并非完全审丑，同样有审美追求。"
   },
   {
     "bank": "舞蹈鉴赏",
@@ -16139,7 +16338,8 @@ window.QUESTION_BANK = [
     "options": [],
     "answer": "错误",
     "category": "1.48 中国当代舞",
-    "id": "q1246"
+    "id": "q1246",
+    "explanation": "群众舞蹈属群众自娱，不含职业舞者所跳。"
   },
   {
     "bank": "舞蹈鉴赏",
