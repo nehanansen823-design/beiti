@@ -1,5 +1,5 @@
-/* 背题助手 Service Worker —— 缓存应用外壳，支持离线使用 */
-const CACHE = "beiti-v1";
+/* 背题助手 Service Worker —— 网络优先，离线回退（v2） */
+const CACHE = "beiti-v2";
 const ASSETS = [
   "./",
   "./index.html",
@@ -27,14 +27,16 @@ self.addEventListener("activate", (e) => {
 
 self.addEventListener("fetch", (e) => {
   if (e.request.method !== "GET") return;
+  // 网络优先：有网就用最新内容，并顺手更新缓存；断网才用缓存兜底
   e.respondWith(
-    caches.match(e.request).then((cached) => {
-      if (cached) return cached;
-      return fetch(e.request).then((resp) => {
+    fetch(e.request)
+      .then((resp) => {
         const copy = resp.clone();
         caches.open(CACHE).then((c) => c.put(e.request, copy));
         return resp;
-      }).catch(() => cached);
-    })
+      })
+      .catch(() =>
+        caches.match(e.request).then((cached) => cached || caches.match("./"))
+      )
   );
 });
