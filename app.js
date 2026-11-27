@@ -262,45 +262,51 @@ function renderView(view) {
 function renderHome() {
   const bankList = banks();
 
-  // 题库选择（开头先选择题库）
-  $("#bankSelector").innerHTML = `<div class="card">
-    <div class="card-title">📚 选择题库</div>
-    <div class="bank-list">${bankList.map((b) => `
-      <button class="bank-btn ${b === state.currentBank ? "active" : ""}" onclick="setCurrentBank('${esc(b)}')">
-        <span class="bank-name">${esc(b)}</span>
-        <span class="bank-count">${effectiveBank().filter((q) => q.bank === b).length} 题</span>
-      </button>`).join("")}
-    </div>
-  </div>`;
-
-  // 断点续刷：按题库分别列出未完成的练习
-  const sessions = state.sessions || {};
-  const sessionKeys = Object.keys(sessions).filter((k) => sessions[k] && sessions[k].ids && sessions[k].ids.length);
-  if (sessionKeys.length) {
-    const cards = sessionKeys.map((k) => {
-      const s = sessions[k];
-      const label = s.mode === "practice" ? "刷题" : "背题";
-      return `<div class="card" style="border-color:var(--warn);margin-bottom:10px">
-        <div class="card-title">🔁 继续上次未完成的${label}</div>
-        <p class="muted">${esc(k)} · 进行到第 ${(s.index || 0) + 1} 题</p>
-        <div class="row">
-          <button class="btn primary" style="flex:1" onclick="resumeSession('${esc(k)}')">继续做</button>
-          <button class="btn ghost" onclick="clearSession('${esc(k)}');renderHome()">放弃</button>
-        </div>
-      </div>`;
-    }).join("");
-    $("#bankSelector").insertAdjacentHTML("beforeend", cards);
-  }
-
+  // ========== 选择题库界面（全屏） ==========
   if (!state.currentBank) {
+    $("#bankSelector").innerHTML = `
+      <div style="text-align:center;padding:8px 0 4px">
+        <div style="font-size:34px">📚</div>
+        <h2 style="margin:6px 0 2px;font-size:20px">选择题库</h2>
+        <p class="muted">选择一个题库开始学习，各题库进度独立保存</p>
+      </div>
+      <div class="bank-list">${bankList.map((b) => `
+        <button class="bank-btn" onclick="setCurrentBank('${esc(b)}')">
+          <span class="bank-name">${esc(b)}</span>
+          <span class="bank-count">${effectiveBank().filter((q) => q.bank === b).length} 题</span>
+        </button>`).join("")}
+      </div>`;
+
+    // 断点续刷（跨题库列出未完成的练习）
+    const sessions = state.sessions || {};
+    const sessionKeys = Object.keys(sessions).filter((k) => sessions[k] && sessions[k].ids && sessions[k].ids.length);
+    if (sessionKeys.length) {
+      const cards = sessionKeys.map((k) => {
+        const s = sessions[k];
+        const label = s.mode === "practice" ? "刷题" : "背题";
+        return `<div class="card" style="border-color:var(--warn);margin-bottom:10px">
+          <div class="card-title">🔁 继续上次未完成的${label}</div>
+          <p class="muted">${esc(k)} · 进行到第 ${(s.index || 0) + 1} 题</p>
+          <div class="row">
+            <button class="btn primary" style="flex:1" onclick="resumeSession('${esc(k)}')">继续做</button>
+            <button class="btn ghost" onclick="clearSession('${esc(k)}');renderHome()">放弃</button>
+          </div>
+        </div>`;
+      }).join("");
+      $("#bankSelector").insertAdjacentHTML("beforeend", `<div class="card-title" style="margin-top:18px">🔁 继续上次未完成</div>` + cards);
+    }
+
     $("#statGrid").innerHTML = "";
-    $("#categoryProgress").innerHTML = `<div class="card" style="text-align:center;padding:34px 16px">
-      <div style="font-size:36px">👆</div>
-      <div class="card-title" style="margin-top:8px">请先在上方选择一个题库</div>
-      <p class="muted">选好后即可开始背题 / 刷题，进度按题库分开统计</p>
-    </div>`;
+    $("#categoryProgress").innerHTML = "";
+    $("#quickStartCard").style.display = "none";
+    $("#statsCard").style.display = "none";
     return;
   }
+
+  // ========== 题库专属界面 ==========
+  $("#bankSelector").innerHTML = "";
+  $("#quickStartCard").style.display = "";
+  $("#statsCard").style.display = "";
 
   const bank = activeBank();
   const total = bank.length;
@@ -373,7 +379,22 @@ function renderHome() {
 function setCurrentBank(name) {
   state.currentBank = name;
   saveState();
+  applyBankMode();
   switchView("home");
+}
+
+function exitToBankSelect() {
+  state.currentBank = null;
+  saveState();
+  applyBankMode();
+  switchView("home");
+}
+
+function applyBankMode() {
+  const hasBank = !!state.currentBank;
+  document.body.classList.toggle("no-bank", !hasBank);
+  const btn = $("#btnBanks");
+  if (btn) btn.style.display = hasBank ? "" : "none";
 }
 
 /* ---------- 断点续刷（保存/恢复当前练习进度） ---------- */
@@ -1344,9 +1365,11 @@ function init() {
   if (cfg.subtitle) $("#siteSubtitle").textContent = cfg.subtitle;
 
   applyTheme();
+  applyBankMode();
   $("#btnSpeak").textContent = state.tts ? "🔊" : "🔇";
 
   // 顶部按钮
+  $("#btnBanks").onclick = exitToBankSelect;
   $("#btnTheme").onclick = toggleTheme;
   $("#btnSpeak").onclick = toggleTts;
   $("#btnData").onclick = () => {
