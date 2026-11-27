@@ -29,6 +29,7 @@ function defaultState() {
     favorite: {},
     sr: {},
     stats: {},
+    daily: {},
   };
 }
 
@@ -208,6 +209,11 @@ function record(id, correct) {
     // 连续答对则从错题本移除
     delete state.wrong[id];
   }
+  // 每日学习记录（用于统计趋势）
+  const day = todayStr();
+  if (!state.daily[day]) state.daily[day] = { attempts: 0, correct: 0 };
+  state.daily[day].attempts += 1;
+  if (correct) state.daily[day].correct += 1;
   saveState();
 }
 
@@ -306,25 +312,49 @@ function renderHome() {
     <div class="stat-card"><div class="num">${favCount}</div><div class="label">收藏</div></div>
   `;
 
-  // 分类进度
+  // 学习统计：最近 14 天趋势 + 各章节正确率
+  const trendDays = [];
+  for (let i = 13; i >= 0; i--) {
+    const d = new Date();
+    d.setDate(d.getDate() - i);
+    trendDays.push(d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0"));
+  }
+  const maxAttempts = Math.max(1, ...trendDays.map((d) => (state.daily[d] || {}).attempts || 0));
+  const trendHTML = `<div class="trend-chart">${trendDays.map((d) => {
+    const a = (state.daily[d] || {}).attempts || 0;
+    const c = (state.daily[d] || {}).correct || 0;
+    const h = Math.round((a / maxAttempts) * 64);
+    return `<div class="trend-col" title="${d} · 刷 ${a} 题 · 对 ${c} 题">
+      <div class="trend-num">${a || ""}</div>
+      <div class="trend-bar"><i style="height:${Math.max(h, a ? 3 : 1)}px"></i></div>
+      <div class="trend-day">${d.slice(5).replace("-", "/")}</div>
+    </div>`;
+  }).join("")}</div>`;
+
   const byCat = {};
   bank.forEach((q) => { byCat[q.category || "未分类"] = (byCat[q.category || "未分类"] || 0) + 1; });
-  const learnedByCat = {};
-  Object.keys(state.sr).forEach((id) => {
-    if (state.sr[id].level >= 1) {
-      const q = getQuestion(id);
-      if (q) { const c = q.category || "未分类"; learnedByCat[c] = (learnedByCat[c] || 0) + 1; }
-    }
+  const catStats = {};
+  bank.forEach((q) => {
+    const c = q.category || "未分类";
+    if (!catStats[c]) catStats[c] = { attempts: 0, correct: 0 };
+    const s = state.stats[q.id];
+    if (s) { catStats[c].attempts += s.attempts; catStats[c].correct += s.correct; }
   });
-  $("#categoryProgress").innerHTML = Object.keys(byCat).map((c) => {
+  const chapterHTML = Object.keys(byCat).map((c) => {
     const total = byCat[c];
-    const learned = learnedByCat[c] || 0;
-    const pct = total ? Math.round((learned / total) * 100) : 0;
+    const st = catStats[c] || { attempts: 0, correct: 0 };
+    const pct = st.attempts ? Math.round((st.correct / st.attempts) * 100) : 0;
     return `<div class="progress-row">
-      <div class="top"><span>${esc(c)}</span><span>${learned}/${total} · ${pct}%</span></div>
+      <div class="top"><span>${esc(c)}</span><span>正确率 ${pct}% · 已刷 ${st.attempts}/${total}</span></div>
       <div class="progress-bar"><i style="width:${pct}%"></i></div>
     </div>`;
   }).join("") || '<p class="muted">暂无题目，去题库添加或导入吧。</p>';
+
+  $("#categoryProgress").innerHTML = `
+    <div class="card-title" style="margin-top:2px">📈 最近 14 天学习趋势</div>
+    ${trendHTML}
+    <div class="card-title" style="margin-top:16px">📚 各章节正确率</div>
+    ${chapterHTML}`;
 }
 
 function setCurrentBank(name) {
