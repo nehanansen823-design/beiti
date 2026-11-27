@@ -42,9 +42,23 @@ function loadState() {
       const s = JSON.parse(raw);
       // 迁移旧版单 session → 按题库的 sessions
       if (s.session && !s.sessions) {
-        s.sessions = { [s.session.bank || "未分类"]: s.session };
+        const m = s.session.mode || "flashcard";
+        s.sessions = { [s.session.bank || "未分类"]: { [m]: s.session } };
       }
       delete s.session;
+      // 迁移旧版 {bank: {mode, ids,...}} → {bank: {flashcard/practice: {...}}}
+      if (s.sessions && typeof s.sessions === "object") {
+        const ns = {};
+        for (const k of Object.keys(s.sessions)) {
+          const v = s.sessions[k];
+          if (v && v.mode) {
+            ns[k] = { [v.mode]: v };
+          } else if (v && typeof v === "object") {
+            ns[k] = v;
+          }
+        }
+        s.sessions = ns;
+      }
       return Object.assign(defaultState(), s);
     }
   } catch (e) { /* ignore */ }
@@ -264,6 +278,10 @@ function renderHome() {
 
   // ========== 选择题库界面（全屏） ==========
   if (!state.currentBank) {
+    const hasSave = (b) => {
+      const ss = state.sessions && state.sessions[b];
+      return !!(ss && ((ss.flashcard && ss.flashcard.ids && ss.flashcard.ids.length) || (ss.practice && ss.practice.ids && ss.practice.ids.length)));
+    };
     $("#bankSelector").innerHTML = `
       <div style="text-align:center;padding:8px 0 4px">
         <div style="font-size:34px">📚</div>
@@ -272,29 +290,10 @@ function renderHome() {
       </div>
       <div class="bank-list">${bankList.map((b) => `
         <button class="bank-btn" onclick="setCurrentBank('${esc(b)}')">
-          <span class="bank-name">${esc(b)}</span>
+          <span class="bank-name">${esc(b)}${hasSave(b) ? ' 📌' : ''}</span>
           <span class="bank-count">${effectiveBank().filter((q) => q.bank === b).length} 题</span>
         </button>`).join("")}
       </div>`;
-
-    // 断点续刷（跨题库列出未完成的练习）
-    const sessions = state.sessions || {};
-    const sessionKeys = Object.keys(sessions).filter((k) => sessions[k] && sessions[k].ids && sessions[k].ids.length);
-    if (sessionKeys.length) {
-      const cards = sessionKeys.map((k) => {
-        const s = sessions[k];
-        const label = s.mode === "practice" ? "刷题" : "背题";
-        return `<div class="card" style="border-color:var(--warn);margin-bottom:10px">
-          <div class="card-title">🔁 继续上次未完成的${label}</div>
-          <p class="muted">${esc(k)} · 进行到第 ${(s.index || 0) + 1} 题</p>
-          <div class="row">
-            <button class="btn primary" style="flex:1" onclick="resumeSession('${esc(k)}')">继续做</button>
-            <button class="btn ghost" onclick="clearSession('${esc(k)}');renderHome()">放弃</button>
-          </div>
-        </div>`;
-      }).join("");
-      $("#bankSelector").insertAdjacentHTML("beforeend", `<div class="card-title" style="margin-top:18px">🔁 继续上次未完成</div>` + cards);
-    }
 
     $("#statGrid").innerHTML = "";
     $("#categoryProgress").innerHTML = "";
@@ -304,9 +303,33 @@ function renderHome() {
   }
 
   // ========== 题库专属界面 ==========
-  $("#bankSelector").innerHTML = "";
   $("#quickStartCard").style.display = "";
   $("#statsCard").style.display = "";
+
+  // 本题库的存档（背题/刷题分开）
+  const curSessions = (state.sessions && state.sessions[state.currentBank]) || {};
+  let saveHTML = "";
+  if (curSessions.flashcard && curSessions.flashcard.ids && curSessions.flashcard.ids.length) {
+    saveHTML += `<div class="card" style="border-color:var(--warn);margin-bottom:10px">
+      <div class="card-title">🃏 背题存档</div>
+      <p class="muted">上次背到第 ${(curSessions.flashcard.index || 0) + 1} 题</p>
+      <div class="row">
+        <button class="btn primary" style="flex:1" onclick="resumeSession('flashcard')">继续背题</button>
+        <button class="btn ghost" onclick="clearSession('flashcard');renderHome()">删除存档</button>
+      </div>
+    </div>`;
+  }
+  if (curSessions.practice && curSessions.practice.ids && curSessions.practice.ids.length) {
+    saveHTML += `<div class="card" style="border-color:var(--warn);margin-bottom:10px">
+      <div class="card-title">✍️ 刷题存档</div>
+      <p class="muted">上次刷到第 ${(curSessions.practice.index || 0) + 1} 题</p>
+      <div class="row">
+        <button class="btn primary" style="flex:1" onclick="resumeSession('practice')">继续刷题</button>
+        <button class="btn ghost" onclick="clearSession('practice');renderHome()">删除存档</button>
+      </div>
+    </div>`;
+  }
+  $("#bankSelector").innerHTML = saveHTML;
 
   const bank = activeBank();
   const total = bank.length;
@@ -397,66 +420,66 @@ function applyBankMode() {
   if (btn) btn.style.display = hasBank ? "" : "none";
 }
 
-/* ---------- 断点续刷（保存/恢复当前练习进度） ---------- */
+/* ---------- 断点续刷（按题库 + 背题/刷题分别存档） ---------- */
 function persistSession() {
+  const bank = state.currentBank;
+  if (!bank) return;
   if (!state.sessions) state.sessions = {};
-  const bank = state.currentBank || "未分类";
-  let s = null;
+  if (!state.sessions[bank]) state.sessions[bank] = {};
+  let mode = null, s = null;
   if (currentView === "practice" && practice.list && practice.list.length) {
+    mode = "practice";
     s = {
-      mode: "practice",
-      bank: bank,
       ids: practice.list.map((q) => q.id),
       index: practice.index,
       answers: practice.answers,
       results: practice.results,
     };
   } else if (currentView === "flashcard" && flash.list && flash.list.length) {
-    s = {
-      mode: "flashcard",
-      bank: bank,
-      ids: flash.list.map((q) => q.id),
-      index: flash.index,
-    };
+    mode = "flashcard";
+    s = { ids: flash.list.map((q) => q.id), index: flash.index };
   }
-  if (s) state.sessions[bank] = s;
-  else delete state.sessions[bank];
+  if (mode) {
+    if (s) state.sessions[bank][mode] = s;
+    else delete state.sessions[bank][mode];
+  }
   saveState();
 }
 
-function clearSession(bank) {
-  const key = bank || state.currentBank;
-  if (state.sessions) delete state.sessions[key];
+function clearSession(mode) {
+  const bank = state.currentBank;
+  if (!bank || !state.sessions) return;
+  if (mode) {
+    if (state.sessions[bank]) delete state.sessions[bank][mode];
+  } else {
+    delete state.sessions[bank];
+  }
   saveState();
 }
 
-function resumeSession(bank) {
-  const key = bank || state.currentBank;
-  const s = state.sessions && state.sessions[key];
+function resumeSession(mode) {
+  const bank = state.currentBank;
+  const s = state.sessions && state.sessions[bank] && state.sessions[bank][mode];
   if (!s) return;
-  if (s.bank && s.bank !== state.currentBank) {
-    state.currentBank = s.bank;
-    saveState();
-  }
-  if (s.mode === "practice") {
+  if (mode === "practice") {
     practice = {
       list: (s.ids || []).map(getQuestion).filter(Boolean),
       index: Math.min(s.index || 0, (s.ids || []).length - 1),
       answers: (s.answers || []).map((a) => (a === null ? undefined : a)),
       results: (s.results || []).map((r) => (r === null ? undefined : r)),
     };
-    if (!practice.list.length) { clearSession(key); return; }
+    if (!practice.list.length) { clearSession("practice"); return; }
     showStage("practice");
     $("#practiceSetup").classList.add("hidden");
     $("#practiceStage").classList.remove("hidden");
     renderPracticeQuestion();
-  } else if (s.mode === "flashcard") {
+  } else if (mode === "flashcard") {
     flash = {
       list: (s.ids || []).map(getQuestion).filter(Boolean),
       index: Math.min(s.index || 0, (s.ids || []).length - 1),
       flipped: false,
     };
-    if (!flash.list.length) { clearSession(key); return; }
+    if (!flash.list.length) { clearSession("flashcard"); return; }
     showStage("flashcard");
     $("#flashcardSetup").classList.add("hidden");
     $("#flashcardStage").classList.remove("hidden");
@@ -776,7 +799,7 @@ function nextQuestion() {
 }
 
 function renderPracticeSummary() {
-  clearSession();
+  clearSession("practice");
   const total = practice.list.length;
   const correct = practice.results.filter((r) => r === true).length;
   const wrongList = practice.list.filter((q, i) => practice.results[i] === false);
