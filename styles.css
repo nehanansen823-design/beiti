@@ -432,9 +432,28 @@ main { max-width: 900px; margin: 0 auto; padding: 16px 14px; }
 }
 .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 
+/* 一键添加到桌面按钮（常驻右下角） */
+.fab-install {
+  position: fixed;
+  right: 14px;
+  bottom: 86px;
+  z-index: 90;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 11px 16px;
+  font-size: 14px;
+  font-weight: 700;
+  box-shadow: 0 6px 20px rgba(79, 110, 247, .45);
+  cursor: pointer;
+}
+.fab-install:active { transform: scale(.95); }
+
 /* ============ 桌面端适配 ============ */
 @media (min-width: 768px) {
   body { padding-bottom: 0; }
+  .fab-install { bottom: 22px; right: 22px; }
   main { padding: 24px 20px; }
   .tabbar {
     position: sticky;
