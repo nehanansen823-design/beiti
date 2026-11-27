@@ -117,6 +117,8 @@ input, textarea, select { font-family: inherit; }
   border-top: 1px solid var(--border);
   padding-bottom: env(safe-area-inset-bottom);
 }
+.no-bank .tabbar { display: none; }
+.no-bank { padding-bottom: 0; }
 .tab {
   flex: 1;
   border: none;
