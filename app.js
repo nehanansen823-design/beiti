@@ -22,7 +22,7 @@ function defaultState() {
     theme: "light",
     tts: false,
     currentBank: null,
-    session: null,
+    sessions: {},
     customQuestions: [],
     deletedIds: [],
     wrong: {},
@@ -38,7 +38,15 @@ let state = loadState();
 function loadState() {
   try {
     const raw = localStorage.getItem(LS_KEY);
-    if (raw) return Object.assign(defaultState(), JSON.parse(raw));
+    if (raw) {
+      const s = JSON.parse(raw);
+      // 迁移旧版单 session → 按题库的 sessions
+      if (s.session && !s.sessions) {
+        s.sessions = { [s.session.bank || "未分类"]: s.session };
+      }
+      delete s.session;
+      return Object.assign(defaultState(), s);
+    }
   } catch (e) { /* ignore */ }
   return defaultState();
 }
@@ -265,18 +273,23 @@ function renderHome() {
     </div>
   </div>`;
 
-  // 断点续刷：提示继续上次未完成的练习
-  if (state.session && state.session.ids && state.session.ids.length) {
-    const s = state.session;
-    const label = s.mode === "practice" ? "刷题" : "背题";
-    $("#bankSelector").insertAdjacentHTML("beforeend", `<div class="card" style="border-color:var(--warn)">
-      <div class="card-title">🔁 继续上次未完成的${label}</div>
-      <p class="muted">${s.bank || ""} · 上次进行到第 ${(s.index || 0) + 1} 题</p>
-      <div class="row">
-        <button class="btn primary" style="flex:1" onclick="resumeSession()">继续做</button>
-        <button class="btn ghost" onclick="clearSession();renderHome()">放弃</button>
-      </div>
-    </div>`);
+  // 断点续刷：按题库分别列出未完成的练习
+  const sessions = state.sessions || {};
+  const sessionKeys = Object.keys(sessions).filter((k) => sessions[k] && sessions[k].ids && sessions[k].ids.length);
+  if (sessionKeys.length) {
+    const cards = sessionKeys.map((k) => {
+      const s = sessions[k];
+      const label = s.mode === "practice" ? "刷题" : "背题";
+      return `<div class="card" style="border-color:var(--warn);margin-bottom:10px">
+        <div class="card-title">🔁 继续上次未完成的${label}</div>
+        <p class="muted">${esc(k)} · 进行到第 ${(s.index || 0) + 1} 题</p>
+        <div class="row">
+          <button class="btn primary" style="flex:1" onclick="resumeSession('${esc(k)}')">继续做</button>
+          <button class="btn ghost" onclick="clearSession('${esc(k)}');renderHome()">放弃</button>
+        </div>
+      </div>`;
+    }).join("");
+    $("#bankSelector").insertAdjacentHTML("beforeend", cards);
   }
 
   if (!state.currentBank) {
@@ -365,11 +378,13 @@ function setCurrentBank(name) {
 
 /* ---------- 断点续刷（保存/恢复当前练习进度） ---------- */
 function persistSession() {
+  if (!state.sessions) state.sessions = {};
+  const bank = state.currentBank || "未分类";
   let s = null;
   if (currentView === "practice" && practice.list && practice.list.length) {
     s = {
       mode: "practice",
-      bank: state.currentBank,
+      bank: bank,
       ids: practice.list.map((q) => q.id),
       index: practice.index,
       answers: practice.answers,
@@ -378,22 +393,25 @@ function persistSession() {
   } else if (currentView === "flashcard" && flash.list && flash.list.length) {
     s = {
       mode: "flashcard",
-      bank: state.currentBank,
+      bank: bank,
       ids: flash.list.map((q) => q.id),
       index: flash.index,
     };
   }
-  state.session = s;
+  if (s) state.sessions[bank] = s;
+  else delete state.sessions[bank];
   saveState();
 }
 
-function clearSession() {
-  state.session = null;
+function clearSession(bank) {
+  const key = bank || state.currentBank;
+  if (state.sessions) delete state.sessions[key];
   saveState();
 }
 
-function resumeSession() {
-  const s = state.session;
+function resumeSession(bank) {
+  const key = bank || state.currentBank;
+  const s = state.sessions && state.sessions[key];
   if (!s) return;
   if (s.bank && s.bank !== state.currentBank) {
     state.currentBank = s.bank;
@@ -406,7 +424,7 @@ function resumeSession() {
       answers: (s.answers || []).map((a) => (a === null ? undefined : a)),
       results: (s.results || []).map((r) => (r === null ? undefined : r)),
     };
-    if (!practice.list.length) { clearSession(); return; }
+    if (!practice.list.length) { clearSession(key); return; }
     showStage("practice");
     $("#practiceSetup").classList.add("hidden");
     $("#practiceStage").classList.remove("hidden");
@@ -417,7 +435,7 @@ function resumeSession() {
       index: Math.min(s.index || 0, (s.ids || []).length - 1),
       flipped: false,
     };
-    if (!flash.list.length) { clearSession(); return; }
+    if (!flash.list.length) { clearSession(key); return; }
     showStage("flashcard");
     $("#flashcardSetup").classList.add("hidden");
     $("#flashcardStage").classList.remove("hidden");
