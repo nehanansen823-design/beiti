@@ -1255,17 +1255,43 @@ function emptyHTML(icon, title, desc, gotoView) {
   </div>`;
 }
 
+const THEMES = [
+  { key: "light", label: "默认", color: "#f5f6fa" },
+  { key: "white", label: "纯白", color: "#ffffff" },
+  { key: "beige", label: "米黄", color: "#f6f1e4" },
+  { key: "green", label: "浅绿", color: "#eaf4ea" },
+  { key: "blue",  label: "浅蓝", color: "#eaf1fc" },
+  { key: "pink",  label: "浅粉", color: "#fbeff4" },
+  { key: "dark",  label: "夜间", color: "#12141c" },
+];
+
 function applyTheme() {
-  document.documentElement.setAttribute("data-theme", state.theme);
+  document.documentElement.setAttribute("data-theme", state.theme || "light");
   $("#btnTheme").textContent = state.theme === "dark" ? "☀️" : "🌙";
   const meta = document.querySelector('meta[name="theme-color"]');
   if (meta) meta.content = state.theme === "dark" ? "#12141c" : "#4f6ef7";
+  renderThemeSwatches();
+}
+
+function setTheme(key) {
+  state.theme = key;
+  saveState();
+  applyTheme();
+  toast("已切换背景颜色");
 }
 
 function toggleTheme() {
-  state.theme = state.theme === "dark" ? "light" : "dark";
-  saveState();
-  applyTheme();
+  setTheme(state.theme === "dark" ? "light" : "dark");
+}
+
+function renderThemeSwatches() {
+  const el = $("#themeSwatches");
+  if (!el) return;
+  el.innerHTML = THEMES.map((t) => `
+    <button class="swatch ${state.theme === t.key ? "active" : ""}" onclick="setTheme('${t.key}')">
+      <span class="dot" style="background:${t.color}"></span>
+      <span>${t.label}</span>
+    </button>`).join("");
 }
 
 function toggleTts() {
