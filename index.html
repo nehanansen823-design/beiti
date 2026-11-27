@@ -11,7 +11,7 @@
   <title>背题助手</title>
   <link rel="manifest" href="manifest.json" />
   <link rel="apple-touch-icon" href="icon-192.png" />
-  <link rel="stylesheet" href="styles.css?v=1252" />
+  <link rel="stylesheet" href="styles.css?v=1253" />
 </head>
 <body>
   <header class="app-header">
@@ -23,6 +23,7 @@
       </div>
     </div>
     <div class="header-actions">
+      <button id="btnBanks" class="icon-btn" title="切换题库" style="display:none">📚</button>
       <button id="btnSpeak" class="icon-btn" title="语音朗读开关">🔇</button>
       <button id="btnTheme" class="icon-btn" title="切换夜间模式">🌙</button>
       <button id="btnData" class="icon-btn" title="导入/导出题库">⚙️</button>
@@ -45,7 +46,7 @@
       <div id="bankSelector"></div>
       <div class="stat-grid" id="statGrid"></div>
 
-      <div class="card">
+      <div class="card" id="quickStartCard">
         <div class="card-title">快速开始</div>
         <div class="quick-actions">
           <button class="quick-btn" data-goto="flashcard">🃏 开始背题</button>
@@ -54,7 +55,7 @@
         </div>
       </div>
 
-      <div class="card">
+      <div class="card" id="statsCard">
         <div class="card-title">学习统计</div>
         <div id="categoryProgress"></div>
       </div>
@@ -172,8 +173,8 @@
 
   <div id="toast" class="toast"></div>
 
-  <script src="questions.js?v=1252"></script>
-  <script src="app.js?v=1252"></script>
+  <script src="questions.js?v=1253"></script>
+  <script src="app.js?v=1253"></script>
   <script>
     if ("serviceWorker" in navigator) {
       window.addEventListener("load", function () {
