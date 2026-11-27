@@ -1356,6 +1356,29 @@ function renderThemeSwatches() {
     </button>`).join("");
 }
 
+/* ---------- 添加到桌面 / PWA 安装 ---------- */
+let deferredPrompt = null;
+window.addEventListener("beforeinstallprompt", (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+});
+
+function installApp() {
+  if (deferredPrompt) {
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.then(() => { deferredPrompt = null; });
+    return;
+  }
+  const ua = navigator.userAgent || "";
+  if (/iphone|ipad|ipod/i.test(ua)) {
+    alert("iPhone 添加到主屏幕：\n\n1. 用 Safari 打开本页\n2. 点底部中间的「分享」按钮（方框＋向上箭头）\n3. 下滑选「添加到主屏幕」\n4. 点右上角「添加」");
+  } else if (/android/i.test(ua)) {
+    alert("安卓添加到主屏幕：\n\n1. 点浏览器右上角「⋮」菜单\n2. 选「添加到主屏幕」或「安装应用」\n3. 点「添加 / 安装」");
+  } else {
+    alert("电脑添加到桌面：\n\nChrome / Edge 在地址栏右侧会有一个「安装」图标（⊕或电脑图标），点它即可安装。");
+  }
+}
+
 function toggleTts() {
   state.tts = !state.tts;
   saveState();
@@ -1395,6 +1418,7 @@ function init() {
   $("#btnBanks").onclick = exitToBankSelect;
   $("#btnTheme").onclick = toggleTheme;
   $("#btnSpeak").onclick = toggleTts;
+  $("#btnInstall").onclick = installApp;
   $("#btnData").onclick = () => {
     $("#dataTotal").textContent = activeBank().length;
     showModal("modal-data");
