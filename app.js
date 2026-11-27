@@ -22,6 +22,7 @@ function defaultState() {
     theme: "light",
     tts: false,
     currentBank: null,
+    session: null,
     customQuestions: [],
     deletedIds: [],
     wrong: {},
@@ -258,6 +259,20 @@ function renderHome() {
     </div>
   </div>`;
 
+  // 断点续刷：提示继续上次未完成的练习
+  if (state.session && state.session.ids && state.session.ids.length) {
+    const s = state.session;
+    const label = s.mode === "practice" ? "刷题" : "背题";
+    $("#bankSelector").insertAdjacentHTML("beforeend", `<div class="card" style="border-color:var(--warn)">
+      <div class="card-title">🔁 继续上次未完成的${label}</div>
+      <p class="muted">${s.bank || ""} · 上次进行到第 ${(s.index || 0) + 1} 题</p>
+      <div class="row">
+        <button class="btn primary" style="flex:1" onclick="resumeSession()">继续做</button>
+        <button class="btn ghost" onclick="clearSession();renderHome()">放弃</button>
+      </div>
+    </div>`);
+  }
+
   if (!state.currentBank) {
     $("#statGrid").innerHTML = "";
     $("#categoryProgress").innerHTML = `<div class="card" style="text-align:center;padding:34px 16px">
@@ -316,6 +331,68 @@ function setCurrentBank(name) {
   state.currentBank = name;
   saveState();
   switchView("home");
+}
+
+/* ---------- 断点续刷（保存/恢复当前练习进度） ---------- */
+function persistSession() {
+  let s = null;
+  if (currentView === "practice" && practice.list && practice.list.length) {
+    s = {
+      mode: "practice",
+      bank: state.currentBank,
+      ids: practice.list.map((q) => q.id),
+      index: practice.index,
+      answers: practice.answers,
+      results: practice.results,
+    };
+  } else if (currentView === "flashcard" && flash.list && flash.list.length) {
+    s = {
+      mode: "flashcard",
+      bank: state.currentBank,
+      ids: flash.list.map((q) => q.id),
+      index: flash.index,
+    };
+  }
+  state.session = s;
+  saveState();
+}
+
+function clearSession() {
+  state.session = null;
+  saveState();
+}
+
+function resumeSession() {
+  const s = state.session;
+  if (!s) return;
+  if (s.bank && s.bank !== state.currentBank) {
+    state.currentBank = s.bank;
+    saveState();
+  }
+  if (s.mode === "practice") {
+    practice = {
+      list: (s.ids || []).map(getQuestion).filter(Boolean),
+      index: Math.min(s.index || 0, (s.ids || []).length - 1),
+      answers: (s.answers || []).map((a) => (a === null ? undefined : a)),
+      results: (s.results || []).map((r) => (r === null ? undefined : r)),
+    };
+    if (!practice.list.length) { clearSession(); return; }
+    showStage("practice");
+    $("#practiceSetup").classList.add("hidden");
+    $("#practiceStage").classList.remove("hidden");
+    renderPracticeQuestion();
+  } else if (s.mode === "flashcard") {
+    flash = {
+      list: (s.ids || []).map(getQuestion).filter(Boolean),
+      index: Math.min(s.index || 0, (s.ids || []).length - 1),
+      flipped: false,
+    };
+    if (!flash.list.length) { clearSession(); return; }
+    showStage("flashcard");
+    $("#flashcardSetup").classList.add("hidden");
+    $("#flashcardStage").classList.remove("hidden");
+    renderFlashcard();
+  }
 }
 
 function esc(s) {
@@ -397,6 +474,7 @@ function renderFlashcardSetup() {
 }
 
 function renderFlashcard() {
+  persistSession();
   const q = flash.list[flash.index];
   const total = flash.list.length;
   const idx = flash.index + 1;
@@ -490,6 +568,7 @@ function renderPracticeSetup() {
 }
 
 function renderPracticeQuestion() {
+  persistSession();
   const q = practice.list[practice.index];
   const total = practice.list.length;
   const idx = practice.index + 1;
@@ -628,6 +707,7 @@ function nextQuestion() {
 }
 
 function renderPracticeSummary() {
+  clearSession();
   const total = practice.list.length;
   const correct = practice.results.filter((r) => r === true).length;
   const wrongList = practice.list.filter((q, i) => practice.results[i] === false);
