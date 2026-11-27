@@ -11,7 +11,7 @@
   <title>背题助手</title>
   <link rel="manifest" href="manifest.json" />
   <link rel="apple-touch-icon" href="icon-192.png" />
-  <link rel="stylesheet" href="styles.css?v=1249" />
+  <link rel="stylesheet" href="styles.css?v=1250" />
 </head>
 <body>
   <header class="app-header">
@@ -149,7 +149,10 @@
         <button class="modal-close" data-close="modal-data">✕</button>
       </div>
       <div class="modal-body">
-        <p class="muted">共 <strong id="dataTotal">0</strong> 道题。数据保存在本浏览器，换设备需导出备份。</p>
+        <label>🎨 背景颜色</label>
+        <div class="theme-swatches" id="themeSwatches"></div>
+
+        <p class="muted" style="margin-top:10px">共 <strong id="dataTotal">0</strong> 道题。数据保存在本浏览器，换设备需导出备份。</p>
 
         <label>导入题库（JSON 或 CSV）</label>
         <input id="importFile" type="file" accept=".json,.csv,.txt" />
@@ -169,8 +172,8 @@
 
   <div id="toast" class="toast"></div>
 
-  <script src="questions.js?v=1249"></script>
-  <script src="app.js?v=1249"></script>
+  <script src="questions.js?v=1250"></script>
+  <script src="app.js?v=1250"></script>
   <script>
     if ("serviceWorker" in navigator) {
       window.addEventListener("load", function () {
